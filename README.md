@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Visual-Customer-Journey-Workflow-Builder/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat-square" alt="License: CC0-1.0" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/sshandutta2007?label=Follow" /></a>
@@ -58,9 +58,9 @@ Commercial, cloud-hosted visual customer journey and workflow automation builder
 
 ## 🟩 Open-Source Software
 
-Self-hosted, transparent, community-driven workflow automation platforms, customer journey engines, and visual orchestration tools. Sorted in **descending order by GitHub star count**.
+Self-hosted, transparent, community-driven workflow automation platforms, customer journey engines, and visual orchestration tools. Sorted in **descending order by GitHub Stars_Count**.
 
-| Project | GitHub Stars | License | Primary Tech Stack | Description & Highlights |
+| Project | GitHub_Stars | License | Primary Tech Stack | Description & Highlights |
 | :--- | :--- | :--- | :--- | :--- |
 | 🔀 **[n8n](https://github.com/n8n-io/n8n)** | [![n8n Stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers) | Sustainable Use (Source-Available) | TypeScript, Node.js, Vue | Leading visual workflow automation platform with 500+ pre-built integrations, custom JavaScript/Python code execution, and native AI/LangChain agent orchestration. |
 | 🤖 **[Dify](https://github.com/langgenius/dify)** | [![Dify Stars](https://img.shields.io/github/stars/langgenius/dify?style=social&color=white)](https://github.com/langgenius/dify/stargazers) | Apache-2.0 / Dual | Python, TypeScript, Next.js | Production-grade LLM app development and visual agentic workflow builder. Features visual prompt orchestration, multi-step RAG pipelines, and conversational journey nodes. |
