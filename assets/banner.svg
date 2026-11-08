@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0f172a; border-radius:16px; overflow:hidden;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="nodeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+
+    <linearGradient id="nodeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+
+    <linearGradient id="nodeGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3"/>
+    </pattern>
+
+    <style>
+      .pulse-line {
+        stroke-dasharray: 8 16;
+        animation: flowPulse 12s linear infinite;
+      }
+      .pulse-line-fast {
+        stroke-dasharray: 6 12;
+        animation: flowPulseFast 6s linear infinite;
+      }
+      .node-card {
+        animation: floatCard 4s ease-in-out infinite alternate;
+      }
+      .node-card-delayed {
+        animation: floatCard 4.5s ease-in-out 1s infinite alternate;
+      }
+      .glow-particle {
+        animation: pulseParticle 3s ease-in-out infinite alternate;
+      }
+      @keyframes flowPulse {
+        0% { stroke-dashoffset: 240; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes flowPulseFast {
+        0% { stroke-dashoffset: 180; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes floatCard {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-8px); }
+      }
+      @keyframes pulseParticle {
+        0% { opacity: 0.3; r: 3px; }
+        100% { opacity: 0.9; r: 6px; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGrad)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <!-- Background Animated Flow Lines & Nodes (Subtle, Behind Title & Subtitle) -->
+  <g opacity="0.35">
+    <!-- Connecting Curved Pipeline Lines -->
+    <path d="M 80 120 C 220 50, 360 170, 500 100 S 760 60, 920 140 S 1080 80, 1150 130" 
+          fill="none" stroke="#38bdf8" stroke-width="2.5" class="pulse-line"/>
+    <path d="M 50 260 C 200 310, 380 230, 580 290 S 840 260, 1020 300 S 1120 250, 1160 270" 
+          fill="none" stroke="#a855f7" stroke-width="2.5" class="pulse-line-fast"/>
+    
+    <!-- Vertical and Cross branches -->
+    <path d="M 240 85 C 240 180, 260 200, 260 270" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <path d="M 940 135 C 940 220, 960 230, 960 295" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Subtle Dynamic Node Cards in Background Corners -->
+  <g class="node-card" opacity="0.45" transform="translate(60, 50)">
+    <rect width="140" height="50" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="10" fill="url(#nodeGrad1)"/>
+    <text x="45" y="24" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="bold">TRIGGER</text>
+    <text x="45" y="38" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12">Customer Event</text>
+  </g>
+
+  <g class="node-card-delayed" opacity="0.45" transform="translate(1000, 45)">
+    <rect width="140" height="50" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="10" fill="url(#nodeGrad3)"/>
+    <text x="45" y="24" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="bold">ACTION</text>
+    <text x="45" y="38" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12">Multi-Channel</text>
+  </g>
+
+  <g class="node-card" opacity="0.45" transform="translate(80, 255)">
+    <rect width="150" height="50" rx="10" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="10" fill="url(#nodeGrad2)"/>
+    <text x="45" y="24" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="bold">DECISION</text>
+    <text x="45" y="38" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12">Branch Logic</text>
+  </g>
+
+  <g class="node-card-delayed" opacity="0.45" transform="translate(990, 255)">
+    <rect width="150" height="50" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="25" cy="25" r="10" fill="url(#nodeGrad4)"/>
+    <text x="45" y="24" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="bold">ENGAGEMENT</text>
+    <text x="45" y="38" fill="#f8fafc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12">Journey Goal</text>
+  </g>
+
+  <!-- Glowing Particles / Data Packets traveling along lines -->
+  <circle cx="340" cy="130" r="4" fill="#38bdf8" filter="url(#glow)" class="glow-particle"/>
+  <circle cx="700" cy="80" r="5" fill="#c084fc" filter="url(#glow)" class="glow-particle"/>
+  <circle cx="440" cy="260" r="4.5" fill="#818cf8" filter="url(#glow)" class="glow-particle"/>
+  <circle cx="860" cy="275" r="4" fill="#34d399" filter="url(#glow)" class="glow-particle"/>
+
+  <!-- Center Protected Foreground Backdrop Layer (Guarantees crisp readability of Title & Subtitle) -->
+  <rect x="180" y="70" width="840" height="220" rx="16" fill="#0f172a" fill-opacity="0.82" stroke="#334155" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Foreground Title and Subtitle -->
+  <g text-anchor="middle">
+    <!-- Top Category Pill Tag -->
+    <g transform="translate(600, 112)">
+      <rect x="-140" y="-15" width="280" height="30" rx="15" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+      <text y="5" fill="#a5b4fc" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">🚀 CURATED PLATFORMS &amp; ENGINES</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="175" fill="url(#primaryGrad)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">
+      Awesome Visual Customer Journey &amp; Workflow Builder
+    </text>
+
+    <!-- Subtitle Line 1 -->
+    <text x="600" y="218" fill="#e2e8f0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="15" font-weight="500">
+      A curated index of top-tier commercial SaaS solutions and self-hosted open-source engines
+    </text>
+
+    <!-- Subtitle Line 2 -->
+    <text x="600" y="244" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="400">
+      Omnichannel Lifecycle Orchestration • Durable Execution • No-Code / Low-Code Canvas Automations
+    </text>
+
+    <!-- Interactive Badges Pill Row -->
+    <g transform="translate(600, 272)">
+      <rect x="-210" y="-12" width="420" height="24" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text y="4" fill="#38bdf8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600">
+        ✨ Open-Source • ⚡ Enterprise SaaS • 🔄 Durable DAGs • 🤖 AI Agents
+      </text>
+    </g>
+  </g>
+</svg>
